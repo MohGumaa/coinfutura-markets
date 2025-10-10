@@ -42,7 +42,7 @@ This is a comprehensive specification for building <a href="https://coinfutura.c
 
 👉 **Community-Verified Answers**: View answers verified by the community, helping users trust the information they receive.
 
-👉 **Complete Responsiveness**: Jawab AI is optimized for all devices, ensuring a smooth experience across different screens.
+👉 **Complete Responsiveness**: App is optimized for all devices, ensuring a smooth experience across different screens.
 
 👉 **Document and Media Upload for Contextual Search**: Users can upload files for AI-powered contextual searches, with data securely stored and processed.
 
@@ -65,8 +65,8 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://git.jubna.me/jawab/jawab-frontend
-cd jawab-frontend
+git clone https://github.com/MohGumaa/coinfutura-markets
+cd coinfutura-markets
 ```
 
 **Installation**
