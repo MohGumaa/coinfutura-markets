@@ -1,7 +1,7 @@
 <div align="center">
   <br />
-    <a href="#" target="_blank">
-      <img src="https://git.jubna.me/gumaa/jawab/-/raw/main/public/assets/images/jawab.webp" alt="Project Banner">
+    <a href="https://coinfutura.com" target="_blank">
+      <img src="https://coinfutura.com/wp-content/uploads/2025/04/CoinFutura-Feature.jpg" alt="Project Banner" style="border-radius: 4px; margin-bottom: 16px; ">
     </a>
   <br />
 
