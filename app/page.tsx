@@ -1,11 +1,9 @@
-import { Button } from '@/components/ui/button'
 
 const Home = () => {
   return (
-    <div>
-      <h1 className='text-cfu'>Home</h1>
-      <Button>Click me</Button>
-    </div>
+    <section>
+      <h1 className="text-2xl font-semibold">Main Page</h1>
+    </section>
   )
 }
 
