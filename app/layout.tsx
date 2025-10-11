@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider"
+import { ModeToggle } from "@/components/mode-toggle";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -8,7 +10,6 @@ const manrope = Manrope({
   variable: "--font-manrope",
   display: "swap",
 });
-
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mgumaa.com"),
@@ -66,11 +67,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={manrope.variable}>
+    <html lang="en" className={manrope.variable} suppressHydrationWarning>
       <body
         className={`${manrope.className} antialiased`}
       >
-        {children}
+        <ThemeProvider 
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+          <ModeToggle />
+        </ThemeProvider>
       </body>
     </html>
   );
