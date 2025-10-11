@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manrope = Manrope({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-manrope",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mgumaa.com"),
@@ -19,8 +17,47 @@ export const metadata: Metadata = {
     template: "%s | CoinFutura"
   },
   description: "Discover the latest crypto news, price analysis, and blockchain trends with CoinFutura. Trusted insights on Bitcoin, Ethereum, NFTs, and the future of Web3 clear, accurate, and timely.",
+  keywords:[
+    "Crypto News",
+    "Price Analysis",
+    "Blockchain",
+    "Bitcoin",
+    "Ethereum",
+    "NFTs",
+    "Web3",
+    "Top trending coins",
+    "Cryptos",
+    "Exchange",
+    "Airdrop",
+    "Launchpad",
+    "ETF Tracker",
+  ],
+  authors:[
+    {
+      name: "Mohamed Gumaa",
+      url: "https://mgumaa.com",
+    },
+  ],
   creator: "Mohamed Gumaa",
   publisher: "Mohamed Gumaa",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  category: "Crypto",
+  classification: "Crypto Website",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -29,9 +66,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={manrope.variable}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${manrope.className} antialiased`}
       >
         {children}
       </body>
