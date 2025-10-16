@@ -9,6 +9,19 @@
   --color-cfu-0: #03deb5;
   --color-cfu-1: #04c2fc;
   --color-gray-de: #dedede;
+
+  --gradient-cfu-linear: linear-gradient(
+    to bottom right,
+    #03fa6f 0%,
+    #03deb5 58%,
+    #04c2fc 100%
+  );
+  --gradient-cfu-radial: radial-gradient(
+    circle,
+    #03fa6f 0%,
+    #03deb5 58%,
+    #04c2fc 100%
+  );
 }
 
 @theme inline {
@@ -120,11 +133,67 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+/* For Css resets, global elements styles html, body, h1.. */
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* .container {
+    @apply px-4 mx-auto;
+  } */
+}
+
+/* @layer components used for custom reusable components that combine multiple tailwinds classes  */
+@layer components {
+  .flexCenter {
+    @apply flex items-center justify-center;
+  }
+
+  .section {
+    @apply w-full px-3 mx-auto;
+  }
+
+  .cfu-title {
+    @apply text-gray-950 dark:text-white;
+  }
+
+  .title-with-underline {
+    @apply pb-3 border-b-2 border-gray-950/5 dark:border-white/10 relative after:absolute after:content-[""] after:left-0 after:-bottom-0.5 after:w-16 after:h-0.5 after:bg-[image:var(--gradient-cfu-radial)];
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+  }
+
+  .card {
+    @apply rounded-xl border p-4 shadow-sm bg-white;
+  }
+}
+
+/* Used for adding custom utility classes (like new spacing, text effects, or custom animations). */
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }
