@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { env } from "@/config/env"
-import { FOOTER_BOTTOM_NAV_LINKS, FOOTER_COLUMN_DATA } from "@/constants"
+import { FOOTER_BOTTOM_NAV_LINKS, FOOTER_COLUMN_DATA, SOCIALMEDIA } from "@/constants"
 import CoinfuturaLogo from "./coinfutura-logo"
 
 const Footer = () => {
@@ -13,6 +13,22 @@ const Footer = () => {
             <p className="text-gray-700 dark:text-gray-300 text-sm leading-6 mb-6 font-medium">
               Discover the latest crypto news, price analysis, and blockchain trends with CoinFutura. Trusted insights on Bitcoin, Ethereum, NFTs, and the future of Web3 clear, accurate, and timely.
             </p>
+
+            <div className="flex flex-wrap items-center gap-2">
+              {SOCIALMEDIA.map(social => {
+                const IconComponent = social.icon;
+                return (
+                  <a 
+                    key={social.id} 
+                    href={social.href}
+                    aria-label={social.name}
+                    className={`social-icon ${social.className}`}
+                  >
+                    <IconComponent/>
+                  </a>
+                )
+              })}
+            </div>
           </div>
 
           {/* Column */}

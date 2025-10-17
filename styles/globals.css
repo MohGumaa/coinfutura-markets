@@ -169,6 +169,10 @@
     @apply pb-3 border-b-2 border-gray-950/5 dark:border-white/10 relative after:absolute after:content-[""] after:left-0 after:-bottom-0.5 after:w-16 after:h-0.5 after:bg-[image:var(--gradient-cfu-radial)];
   }
 
+  .social-icon {
+    @apply flex items-center justify-center size-8 rounded-full ring inset-ring ring-gray-950/10 inset-ring-white/10 p-0.5 [&_svg]:size-6 opacity-100 hover:opacity-85 transition-all duration-300 ease-in-out;
+  }
+
   .btn {
     @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors;
   }
@@ -184,6 +188,30 @@
 
 /* Used for adding custom utility classes (like new spacing, text effects, or custom animations). */
 @layer utilities {
+  .facebook-bg {
+    background: linear-gradient(227.96deg, #3b5998 11.38%, #2b4170 84.07%);
+  }
+
+  .twitter-bg {
+    background: linear-gradient(227.96deg, #000000 11.38%, #121212 84.07%);
+  }
+
+  .reddit-bg {
+    background: linear-gradient(262.85deg, #f45c9f 5.57%, #ff7563 73.65%);
+  }
+
+  .linkedin-bg {
+    background: linear-gradient(227.96deg, #0077b5 11.38%, #00a0dc 84.07%);
+  }
+
+  .telegram-bg {
+    background: linear-gradient(#36aee0, #1c96d1);
+  }
+
+  .rss-bg {
+    background: #f48225;
+  }
+
   .text-shadow {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
   }

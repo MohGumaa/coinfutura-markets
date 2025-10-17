@@ -1,4 +1,39 @@
-import { FooterColumn, NavLink } from "@/types";
+import BinanceIcon from "@/components/binance-icon";
+import TwitterIcon from "@/components/twitter-icon";
+import TelegramIcon from "@/components/telegram-icon";
+import CoinmarketcapIcon from "@/components/coinmarketcap-icon";
+import { FooterColumn, NavLink, SocialMediaItem } from "@/types";
+
+export const SOCIALMEDIA: SocialMediaItem[] = [
+  {
+    id: 'twitter',
+    name: 'Twitter',
+    href: 'https://twitter.com/yourhandle',
+    className: "twitter-bg",
+    icon: TwitterIcon
+  },
+  {
+    id: 'telegram',
+    name: 'Telegram',
+    href: 'https://twitter.com/yourhandle',
+    className: "telegram-bg",
+    icon: TelegramIcon
+  },
+  {
+    id: 'binance',
+    name: 'Binance',
+    href: 'https://twitter.com/yourhandle',
+    className: "twitter-bg",
+    icon: BinanceIcon
+  },
+    {
+    id: 'coinmarketcap',
+    name: 'Coinmarketcap',
+    href: 'https://twitter.com/yourhandle',
+    className: "bg-white",
+    icon: CoinmarketcapIcon
+  },
+];
 
 export const FOOTER_COLUMN_DATA: FooterColumn[] = [
   {
@@ -35,6 +70,7 @@ export const FOOTER_COLUMN_DATA: FooterColumn[] = [
     ]
   },
 ]
+
 export const FOOTER_BOTTOM_NAV_LINKS: NavLink[] = [
   {
     id: "about",

@@ -2,6 +2,14 @@ export type Logo = {
   className?: string;
 }
 
+export type SocialMediaItem = {
+  id: string;
+  name: string;
+  href: string;
+  className: string;
+  icon: React.ComponentType<any>;
+}
+
 export type NavLink = {
   id: string;
   label: string;
