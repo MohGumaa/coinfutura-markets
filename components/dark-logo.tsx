@@ -1,9 +1,7 @@
-import React from 'react'
-
 const DarkLogo = () => {
   return (
   <svg
-    className="block w-32 h-[45.5px]"
+    className="hidden dark:inline-block w-32 h-[45.5px]"
     viewBox="0 0 146 52"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
