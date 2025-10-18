@@ -70,7 +70,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={manrope.variable} suppressHydrationWarning>
       <body
-        className={`${manrope.className} antialiased`}
+        className={`${manrope.className} antialiased overflow-x-hidden`}
       >
         <ThemeProvider 
           attribute="class"
@@ -78,7 +78,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div id="page" className="max-w-screen overflow-x-hidden">
+          <div id="page" className="max-w-screen">
             {/* HEADER */}
             <Header/>
 
@@ -88,7 +88,7 @@ export default function RootLayout({
               <div className="col-start-1 row-span-full row-start-1 hidden border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 md:block dark:[--pattern-fg:var(--color-white)]/10"/>
 
               {/* MAIN */}
-              <main className="grid gap-24 pb-24 text-gray-950 sm:gap-40 md:pb-40 dark:text-white">{children}</main>
+              <main className="grid gap-24 pb-24 text-gray-950 sm:gap-40 md:pb-40 dark:text-white overflow-x-hidden">{children}</main>
 
               <div className="row-span-full row-start-1 hidden border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 md:col-start-3 md:block dark:[--pattern-fg:var(--color-white)]/10"/>
 

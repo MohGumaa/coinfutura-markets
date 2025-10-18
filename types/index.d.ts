@@ -1,5 +1,8 @@
-export type Logo = {
+export type LogoProps = {
   className?: string;
+  href?: string;            
+  size?: string | number;
+  children?: ReactNode;
 }
 
 export type SocialMediaItem = {
