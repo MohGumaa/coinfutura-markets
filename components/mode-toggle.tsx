@@ -17,7 +17,7 @@ export function ModeToggle() {
 
   if (!mounted) {
     return (
-      <div className="flex-shrink-0 text-sm min-lg:w-24 max-lg:w-full min-sm:h-11 min-lg:h-auto relative z-0 inline-grid grid-cols-3 gap-1 rounded-lg min-lg:rounded-full p-1 min-lg:p-0.75 text-gray-950 dark:text-white bg-gray-950/5 dark:bg-white/10">
+      <div className="flex-shrink-0 text-sm min-lg:w-24 max-lg:w-full min-sm:h-11 min-lg:h-auto relative z-0 inline-grid grid-cols-3 items-center gap-1 rounded-lg min-lg:rounded-full p-1 min-lg:p-0.75 text-gray-950 dark:text-white bg-gray-950/5 dark:bg-white/10">
         <Button variant="outline" size="sm" className="cursor-not-allowed !p-1.5 rounded-sm min-lg:rounded-full min-lg:w-7 min-lg:h-7 [&_svg]:size-4 bg-transparent border-0 shadow-none">
           <MonitorCog /><span className="min-lg:hidden capitalize">system</span>
         </Button>
@@ -32,7 +32,7 @@ export function ModeToggle() {
   }
 
   return (
-    <div className="flex-shrink-0 text-sm min-lg:w-24 max-lg:w-full min-sm:h-11 min-lg:h-auto relative z-0 inline-grid grid-cols-3 gap-1 rounded-lg min-lg:rounded-full p-1 min-lg:p-0.75 text-gray-950 dark:text-white bg-gray-950/5 dark:bg-white/10">
+    <div className="flex-shrink-0 text-sm min-lg:w-24 max-lg:w-full min-sm:h-11 min-lg:h-auto relative z-0 inline-grid grid-cols-3 items-center gap-1 rounded-lg min-lg:rounded-full p-1 min-lg:p-0.75 text-gray-950 dark:text-white bg-gray-950/5 dark:bg-white/10">
       <Button 
         variant="outline" 
         size="sm" 
