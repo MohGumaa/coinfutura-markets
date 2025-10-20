@@ -9,8 +9,11 @@ const Header = () => {
 
         {/* Header Content */}
         <div className="flex items-center justify-between gap-8 px-2.5 lg:px-0">
-          <Logo className="min-lg:me-2"/>
-          <ModeToggle />
+          <Logo />
+          <div className="flex-1 flex justify-between gap-x-2 gap-y-9 min-lg:flex-row min-lg:items-center min-lg:h-full">
+            <nav className='flex-1'>NavMenu</nav>
+            <ModeToggle />
+          </div>
         </div>
 
         <div className="row-span-full row-start-1 md:col-start-3 min-md:block"/>
