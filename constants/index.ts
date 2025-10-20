@@ -2,7 +2,70 @@ import BinanceIcon from "@/components/binance-icon";
 import TwitterIcon from "@/components/twitter-icon";
 import TelegramIcon from "@/components/telegram-icon";
 import CoinmarketcapIcon from "@/components/coinmarketcap-icon";
-import { FooterColumn, NavLink, SocialMediaItem } from "@/types";
+import { FooterColumn, NavItem, NavLink, SocialMediaItem } from "@/types";
+
+// Navigation items array
+export const NAVITEMS: NavItem[] = [
+  {
+    name: 'News',
+    href: 'https://example.com/bitcoin',
+    external: true,
+    submenu: [
+      {
+        name: 'Bitcoin',
+        href: 'https://example.com/bitcoin',
+        external: true
+      },
+      {
+        name: 'Ethereum',
+        href: 'https://example.com/ethereum',
+        external: true
+      },
+      {
+        name: 'Altcoin',
+        href: 'https://example.com/altcoin',
+        external: true
+      },
+      {
+        name: 'Hot News',
+        href: 'https://example.com/hot-news',
+        external: true
+      }
+    ]
+  },
+  {
+    name: 'Market',
+    href: '/market',
+    external: false,
+    submenu: [
+      {
+        name: 'Price Analysis',
+        href: '/price-analysis',
+        external: false
+      },
+      {
+        name: 'Live Market',
+        href: '/live-market',
+        external: false
+      }
+    ]
+  },
+  {
+    name: 'Price Prediction',
+    href: '/price-prediction',
+    external: false,
+  },
+  {
+    name: 'Press Release',
+    href: '/press-release',
+    external: false,
+  },
+  {
+    name: 'Contact Us',
+    href: '/contact-us',
+    external: false,
+  }
+]
 
 export const SOCIALMEDIA: SocialMediaItem[] = [
   {

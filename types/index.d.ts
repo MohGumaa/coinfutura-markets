@@ -3,6 +3,23 @@ export type LogoProps = {
   href?: string;            
 }
 
+export type NavSubmenuItems = {
+  name: string,
+  href: string,
+  external: boolean,
+}
+
+export type NavItem = {
+  name: string,
+  href: string,
+  external: boolean,
+  submenu?: NavSubmenuItems[];
+}
+
+export type NavigationProps = {
+  isMobile?: boolean;
+}
+
 export type SocialMediaItem = {
   id: string;
   name: string;
