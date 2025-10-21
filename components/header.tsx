@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Logo from './logo'
 import { ModeToggle } from './mode-toggle'
 import { Button } from '@/components/ui/button'
-import Navigation from "@/components/navigation"
+import Navigation from '@/components/navigation'
 import { Search, Menu, X } from 'lucide-react'
 
 const Header = () => {
@@ -20,7 +20,7 @@ const Header = () => {
           <div 
             className={`flex-1 flex flex-col justify-between gap-x-2 gap-y-9 min-lg:flex-row min-lg:items-center min-lg:h-full max-lg:fixed max-lg:left-0 max-lg:top-14 max-lg:z-40 max-lg:w-full max-lg:h-[calc(100dvh-56px)] max-lg:bg-white dark:max-lg:bg-gray-950 max-lg:border-t border-black/5 dark:border-white/10 max-lg:overflow-y-auto max-lg:px-3 max-lg:pt-4 max-sm:pb-40 max-lg:pb-4 max-lg:transition-all max-lg:duration-700 max-lg:ease-in-out  ${isOpen ? 'max-lg:translate-x-0' : 'max-lg:-translate-x-full'}`}
           >
-            <Navigation isMobile={isOpen}/>
+            <Navigation/>
             <ModeToggle />
           </div>
 
