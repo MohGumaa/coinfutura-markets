@@ -3,7 +3,7 @@ export type LogoProps = {
   href?: string;            
 }
 
-export type NavSubmenuItems = {
+export type NavLinkProps = {
   name: string,
   href: string,
   external: boolean,
@@ -13,7 +13,7 @@ export type NavItem = {
   name: string,
   href: string,
   external: boolean,
-  submenu?: NavSubmenuItems[];
+  submenu?: NavLinkProps[];
 }
 
 export type NavigationProps = {
