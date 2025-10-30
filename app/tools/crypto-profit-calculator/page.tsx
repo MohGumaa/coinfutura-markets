@@ -6,18 +6,18 @@ const CryptoProfitCalculator = () => {
   return (
     <>
       <section className="text-center mt-16 mb-12">
-        <div className="flex items-center justify-center gap-3 mb-4">
-          <div className="p-3 bg-gradient-to-br from-cfu to-cfu-0 rounded-lg">
-            <TrendingUp className="w-8 h-8 text-white" />
+        <div className="flex items-center justify-center gap-2 md:gap-3 mb-4">
+          <div className="flexCenter bg-gradient-to-br from-cfu to-cfu-0 rounded-lg size-10 sm:size-12 md:size-14 p-1">
+            <TrendingUp className="size-6 sm:size-7 md:size-8 text-white" />
           </div>
-          <h1 className="text-4xl sm:text-5xl font-bold cfu-title">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold cfu-title">
             Crypto Profit{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cfu to-cfu-0">
               Calculator
             </span>
           </h1>
         </div>
-        <p className="text-lg">
+        <p className="md:text-lg">
           Calculate your potential crypto investment returns with fees included
         </p>
       </section>
