@@ -7,63 +7,71 @@ import { FooterColumn, NavItem, NavLink, SocialMediaItem } from "@/types";
 // Navigation items array
 export const NAVITEMS: NavItem[] = [
   {
-    name: 'News',
+    name: 'news',
     href: 'https://example.com/bitcoin',
     external: true,
     submenu: [
       {
-        name: 'Bitcoin',
+        name: 'bitcoin',
         href: 'https://example.com/bitcoin',
         external: true
       },
       {
-        name: 'Ethereum',
+        name: 'ethereum',
         href: 'https://example.com/ethereum',
         external: true
       },
       {
-        name: 'Altcoin',
+        name: 'altcoin',
         href: 'https://example.com/altcoin',
         external: true
       },
       {
-        name: 'Hot News',
+        name: 'hot News',
         href: 'https://example.com/hot-news',
         external: true
       }
     ]
   },
   {
-    name: 'Market',
+    name: 'market',
     href: '/market',
     external: false,
     submenu: [
       {
-        name: 'Price Analysis',
+        name: 'price analysis',
         href: '/price-analysis',
         external: false
       },
       {
-        name: 'Live Market',
+        name: 'live market',
         href: '/live-market',
         external: false
       }
     ]
   },
   {
-    name: 'Price Prediction',
+    name: 'price prediction',
     href: '/price-prediction',
     external: false,
   },
   {
-    name: 'Press Release',
+    name: 'press release',
     href: '/press-release',
     external: false,
   },
   {
-    name: 'Contact Us',
-    href: '/contact-us',
+    name: 'free tools',
+    href: '/tools',
     external: false,
+    submenu: [
+      {
+        name: 'crypto profit calculator',
+        href: '/tools/crypto-profit-calculator',
+        external: false
+
+      }
+    ]
   }
 ]
 
