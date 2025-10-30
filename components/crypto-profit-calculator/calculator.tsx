@@ -82,9 +82,36 @@ const calculator = () => {
   const isProfit = Number.parseFloat(calculations.netProfit) >= 0
 
   return (
-    <div>
+    <>
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+        {/* Input Section */}
+        <div className="lg:col-span-2"></div>
+
+        {/* Quick Stats */}
+        <div className="space-y-4">
+          <Card className="bg-gradient-to-br from-cyan-500 to-cyan-600 border-0">
+            <CardContent className="pt-6 text-white">
+              <p className="text-sm font-semibold text-white mb-1">Price Change</p>
+              <p className="text-3xl font-bold mb-2">${calculations.priceChange}</p>
+              <p
+                className={`text-sm font-semibold ${Number.parseFloat(calculations.priceChangePercent) >= 0 ? "text-green-200" : "text-red-200"}`}
+              >
+                {Number.parseFloat(calculations.priceChangePercent) >= 0 ? "+" : ""}
+                {calculations.priceChangePercent}%
+              </p>
+            </CardContent>
+          </Card>
+          <Card className="bg-gray-950 outline outline-white/10 shadow-none border-0">
+            <CardContent className="pt-6">
+              <p className="text-sm font-medium text-gray-400 mb-1">Coins You'll Get</p>
+              <p className="text-2xl font-bold text-white">{calculations.coins}</p>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
       
-    </div>
+    </>
   )
 }
 

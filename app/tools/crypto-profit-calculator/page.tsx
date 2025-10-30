@@ -26,7 +26,7 @@ const CryptoProfitCalculator = () => {
         <Calculator />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Card className="rounded-lg dark:bg-gray-950 outline outline-gray-950/5 dark:outline-white/10 shadow-none border-0!">
+          <Card className="dark:bg-gray-950 outline outline-gray-950/5 dark:outline-white/10 shadow-none border-0!">
             <CardHeader>
               <CardTitle className="cfu-title text-lg">How It Works</CardTitle>
             </CardHeader>
@@ -40,7 +40,7 @@ const CryptoProfitCalculator = () => {
               </ul>
             </CardContent>
           </Card>
-          <Card className="rounded-lg dark:bg-gray-950 outline outline-gray-950/5 dark:outline-white/10 shadow-none border-0!">
+          <Card className="dark:bg-gray-950 outline outline-gray-950/5 dark:outline-white/10 shadow-none border-0!">
             <CardHeader>
               <CardTitle className="cfu-title text-lg">Disclaimer</CardTitle>
             </CardHeader>
