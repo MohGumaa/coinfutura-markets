@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function Calculator() {
+export default function CalculatorOld() {
   const [buyPrice, setBuyPrice] = useState("");
   const [sellPrice, setSellPrice] = useState("");
   const [investment, setInvestment] = useState("");
