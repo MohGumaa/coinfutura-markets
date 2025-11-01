@@ -48,4 +48,9 @@ export type Coin = {
   name: string
   image: string
   current_price: number
+  market_cap_rank: number
+  market_cap: number | null
+  total_volume: number | null
+  price_change_percentage_24h: number | null
+  price_change_percentage_7d_in_currency: number | null
 }

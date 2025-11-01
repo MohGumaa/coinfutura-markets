@@ -39,21 +39,21 @@ export const NAVITEMS: NavItem[] = [
     external: false,
     submenu: [
       {
+        name: 'live market',
+        href: '/live-market',
+        external: false
+      },
+      {
         name: 'price analysis',
         href: '/price-analysis',
         external: false
       },
       {
-        name: 'live market',
-        href: '/live-market',
-        external: false
-      }
+        name: 'price prediction',
+        href: '/price-prediction',
+        external: false,
+      },
     ]
-  },
-  {
-    name: 'price prediction',
-    href: '/price-prediction',
-    external: false,
   },
   {
     name: 'press release',

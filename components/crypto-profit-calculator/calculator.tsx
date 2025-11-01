@@ -2,24 +2,37 @@
 
 import { Coin } from "@/types";
 import { useMemo, useState } from "react";
-import { DollarSign, Percent, Target, TrendingUp } from "lucide-react";
+import { DollarSign, Percent, Target, TrendingUp, RotateCcw } from "lucide-react";
 
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
+import { Button } from "../ui/button";
+import CoinSelector from "./coin-selector";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card"
 
 const calculator = () => {
-  const [selectedCoin, setSelectedCoin] = useState<Coin | null>(null)
+  // const [selectedCoin, setSelectedCoin] = useState<Coin | null>(null)
+  const [selectedCoin, setSelectedCoin] = useState<any | null>(null)
   const [initialInvestment, setInitialInvestment] = useState<number>(0)
   const [entryPrice, setEntryPrice] = useState<number>(0)
   const [exitPrice, setExitPrice] = useState<number>(0)
   const [investmentFee, setInvestmentFee] = useState<number>(0)
   const [exitFee, setExitFee] = useState<number>(0)
 
-  const handleCoinSelect = (coin: Coin) => {
-    // setSelectedCoin(coin)
-    // setEntryPrice(coin.current_price)
-    // setExitPrice(coin.current_price)
+  // const handleCoinSelect = (coin: Coin)
+  const handleCoinSelect = (coin: any) => {
+    setSelectedCoin(coin)
+    setEntryPrice(coin.current_price)
+    setExitPrice(coin.current_price)
+  }
+
+  const handleReset = () => {
+    setSelectedCoin(null)
+    setInitialInvestment(0)
+    setEntryPrice(0)
+    setExitPrice(0)
+    setInvestmentFee(0)
+    setExitFee(0)
   }
 
   const calculations = useMemo(() => {
@@ -87,14 +100,24 @@ const calculator = () => {
         {/* Input Section */}
         <div className="lg:col-span-2">
           <Card className="dark:bg-gray-950 outline outline-gray-950/5 dark:outline-white/10 shadow-none border-0!">
-            <CardHeader className="border-b border-gray-950/5 dark:border-white/10">
-              <CardTitle className="cfu-title">Investment Details</CardTitle>
-              <CardDescription className="text-gray-600 dark:text-gray-400">
-                Enter your investment parameters
-              </CardDescription>
+            <CardHeader className="border-b border-gray-950/5 dark:border-white/10 flex flex-row items-center justify-between">
+              <div>
+                <CardTitle className="cfu-title">Investment Details</CardTitle>
+                <CardDescription className="text-gray-600 dark:text-gray-400">
+                  Enter your investment parameters
+                </CardDescription>
+              </div>
+              <Button 
+                onClick={handleReset}
+                variant="outline" 
+                size="sm" 
+                className="cursor-pointer"
+              >
+                <RotateCcw className="w-4 h-4" /> Reset
+              </Button>
             </CardHeader>
             <CardContent className="pt-6 space-y-6">
-              <p className="mb-8">CoinSelector</p>
+              <CoinSelector />
               {/* <CoinSelector onCoinSelect={handleCoinSelect} selectedCoin={selectedCoin} /> */}
 
               {/* Initial Investment */}
