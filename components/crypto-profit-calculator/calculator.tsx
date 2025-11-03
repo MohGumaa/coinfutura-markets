@@ -11,7 +11,6 @@ import CoinSelector from "./coin-selector";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card"
 
 const calculator = () => {
-  // const [selectedCoin, setSelectedCoin] = useState<Coin | null>(null)
   const [selectedCoin, setSelectedCoin] = useState<any | null>(null)
   const [initialInvestment, setInitialInvestment] = useState<number>(0)
   const [entryPrice, setEntryPrice] = useState<number>(0)
@@ -19,7 +18,6 @@ const calculator = () => {
   const [investmentFee, setInvestmentFee] = useState<number>(0)
   const [exitFee, setExitFee] = useState<number>(0)
 
-  // const handleCoinSelect = (coin: Coin)
   const handleCoinSelect = (coin: any) => {
     setSelectedCoin(coin)
     setEntryPrice(coin.current_price)
@@ -117,8 +115,7 @@ const calculator = () => {
               </Button>
             </CardHeader>
             <CardContent className="pt-6 space-y-6">
-              <CoinSelector />
-              {/* <CoinSelector onCoinSelect={handleCoinSelect} selectedCoin={selectedCoin} /> */}
+              <CoinSelector onCoinSelect={handleCoinSelect} selectedCoin={selectedCoin} />
 
               {/* Initial Investment */}
               <div className="space-y-2">
@@ -181,7 +178,7 @@ const calculator = () => {
                     className="bg-white dark:bg-white/5 border-gray-950/8 dark:border-white/15 text-gray-950/50 dark:text-gray-200 placeholder-gray-500 focus:border-cfu-0"
                     placeholder="0"
                     min="0"
-                    step="0.1"
+                    step="any"
                   />
                 </div>
                 <div className="space-y-2">
@@ -192,15 +189,14 @@ const calculator = () => {
                     id="exitFee"
                     type="number"
                     value={exitFee === 0 ? "" : exitFee}
-                    onChange={(e) => setExitFee(Number.parseFloat(e.target.value) || 0)}
+                    onChange={(e) => setExitFee(Number.parseFloat(e.target.value))}
                     className="bg-white dark:bg-white/5 border-gray-950/8 dark:border-white/15 text-gray-950/50 dark:text-gray-200 placeholder-gray-500 focus:border-cfu-0"
                     placeholder="0"
                     min="0"
-                    step="0.1"
+                    step="any"
                   />
                 </div>
               </div>
-
             </CardContent>
           </Card>
         </div>
