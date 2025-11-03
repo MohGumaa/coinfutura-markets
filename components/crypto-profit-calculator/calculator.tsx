@@ -11,14 +11,14 @@ import CoinSelector from "./coin-selector";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card"
 
 const calculator = () => {
-  const [selectedCoin, setSelectedCoin] = useState<any | null>(null)
+  const [selectedCoin, setSelectedCoin] = useState<Coin | null>(null)
   const [initialInvestment, setInitialInvestment] = useState<number>(0)
   const [entryPrice, setEntryPrice] = useState<number>(0)
   const [exitPrice, setExitPrice] = useState<number>(0)
   const [investmentFee, setInvestmentFee] = useState<number>(0)
   const [exitFee, setExitFee] = useState<number>(0)
 
-  const handleCoinSelect = (coin: any) => {
+  const handleCoinSelect = (coin: Coin) => {
     setSelectedCoin(coin)
     setEntryPrice(coin.current_price)
     setExitPrice(coin.current_price)

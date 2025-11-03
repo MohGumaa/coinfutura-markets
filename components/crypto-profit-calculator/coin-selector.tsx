@@ -47,7 +47,6 @@ const CoinSelector = ({ onCoinSelect, selectedCoin }: CoinSelectorProps) => {
   }, [])
 
   const handleSelectCoin = (coin: Coin) => {
-    console.log(coin)
     onCoinSelect(coin)
     setIsOpen(false)
     setSearchTerm("")
