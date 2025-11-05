@@ -1,18 +1,20 @@
+import { LucideIcon } from "lucide-react";
+
 export type LogoProps = {
   className?: string;
   href?: string;            
 }
 
 export type NavLinkProps = {
-  name: string,
-  href: string,
-  external: boolean,
+  name: string;
+  href: string;
+  external: boolean;
 }
 
 export type NavItem = {
-  name: string,
-  href: string,
-  external: boolean,
+  name: string;
+  href: string;
+  external: boolean;
   submenu?: NavLinkProps[];
 }
 
@@ -43,14 +45,24 @@ export type FooterColumn = {
 }
 
 export type Coin = {
-  id: string
-  symbol: string
-  name: string
-  image: string
-  current_price: number
-  market_cap_rank: number
-  market_cap: number | null
-  total_volume: number | null
-  price_change_percentage_24h: number | null
-  price_change_percentage_7d_in_currency: number | null
+  id: string;
+  symbol: string;
+  name: string;
+  image: string;
+  current_price: number;
+  market_cap_rank: number;
+  market_cap: number | null;
+  total_volume: number | null;
+  price_change_percentage_24h: number | null;
+  price_change_percentage_7d_in_currency: number | null;
+}
+
+export type HeroSectionProps = {
+  icon?: LucideIcon;
+  title: string;
+  highlight?: string;
+  description: string;
+  // iconSize?: "small" | "medium" | "large";
+  // gradientFrom?: string;
+  // gradientTo?: string;
 }

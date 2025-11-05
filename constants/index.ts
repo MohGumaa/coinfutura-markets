@@ -8,60 +8,65 @@ import { FooterColumn, NavItem, NavLink, SocialMediaItem } from "@/types";
 export const NAVITEMS: NavItem[] = [
   {
     name: 'news',
-    href: 'https://example.com/bitcoin',
+    href: 'https://coinfutura.com/news/',
     external: true,
     submenu: [
       {
+        name: 'altcoin',
+        href: 'https://coinfutura.com/news/altcoin/',
+        external: true
+      },
+      {
         name: 'bitcoin',
-        href: 'https://example.com/bitcoin',
+        href: 'https://coinfutura.com/news/bitcoin/',
         external: true
       },
       {
         name: 'ethereum',
-        href: 'https://example.com/ethereum',
-        external: true
-      },
-      {
-        name: 'altcoin',
-        href: 'https://example.com/altcoin',
+        href: 'https://coinfutura.com/news/ethereum/',
         external: true
       },
       {
         name: 'hot News',
-        href: 'https://example.com/hot-news',
+        href: 'https://coinfutura.com/news/hot-news/',
+        external: true
+      },
+      {
+        name: 'memecoins',
+        href: 'https://coinfutura.com/news/memecoins/',
         external: true
       }
     ]
   },
   {
     name: 'market',
-    href: '/market',
+    href: '/',
     external: false,
     submenu: [
       {
         name: 'live market',
-        href: '/live-market',
+        href: '/',
         external: false
       },
       {
         name: 'price analysis',
-        href: '/price-analysis',
+        href: 'https://coinfutura.com/market/price-analysis/',
         external: false
-      },
-      {
-        name: 'price prediction',
-        href: '/price-prediction',
-        external: false,
       },
     ]
   },
   {
-    name: 'press release',
-    href: '/press-release',
-    external: false,
+    name: 'price prediction',
+    href: 'https://coinfutura.com/market/price-prediction/',
+    external: true,
   },
   {
-    name: 'free tools',
+    name: 'press release',
+    href: 'https://coinfutura.com/press-release/',
+    external: true,
+  },
+  {
+    name: 'crypto tools',
     href: '/tools',
     external: false,
     submenu: [
@@ -70,7 +75,37 @@ export const NAVITEMS: NavItem[] = [
         href: '/tools/crypto-profit-calculator',
         external: false
 
-      }
+      },
+      {
+        name: 'compare coins',
+        href: '/tools/compare-coins',
+        external: false
+
+      },
+      {
+        name: 'ROI Calculator',
+        href: '/tools/roi-calculator',
+        external: false
+
+      },
+      {
+        name: 'portfolio tracker',
+        href: '/tools/portfolio-tracker',
+        external: false
+
+      },
+      {
+        name: 'price converter',
+        href: '/tools/price-converter',
+        external: false
+
+      },
+      {
+        name: 'fee calculator',
+        href: '/tools/fee-calculator',
+        external: false
+
+      },
     ]
   }
 ]
