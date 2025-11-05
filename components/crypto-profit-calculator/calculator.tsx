@@ -12,29 +12,35 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui
 
 const calculator = () => {
   const [selectedCoin, setSelectedCoin] = useState<Coin | null>(null)
-  const [initialInvestment, setInitialInvestment] = useState<number>(0)
-  const [entryPrice, setEntryPrice] = useState<number>(0)
-  const [exitPrice, setExitPrice] = useState<number>(0)
-  const [investmentFee, setInvestmentFee] = useState<number>(0)
-  const [exitFee, setExitFee] = useState<number>(0)
+  const [initialInvestment, setInitialInvestment] = useState<string>("")
+  const [entryPrice, setEntryPrice] = useState<string>("")
+  const [exitPrice, setExitPrice] = useState<string>("")
+  const [investmentFee, setInvestmentFee] = useState<string>("")
+  const [exitFee, setExitFee] = useState<string>("")
 
   const handleCoinSelect = (coin: Coin) => {
     setSelectedCoin(coin)
-    setEntryPrice(coin.current_price)
-    setExitPrice(coin.current_price)
+    setEntryPrice(String(coin.current_price))
+    setExitPrice(String(coin.current_price))
   }
 
   const handleReset = () => {
     setSelectedCoin(null)
-    setInitialInvestment(0)
-    setEntryPrice(0)
-    setExitPrice(0)
-    setInvestmentFee(0)
-    setExitFee(0)
+    setInitialInvestment("")
+    setEntryPrice("")
+    setExitPrice("")
+    setInvestmentFee("")
+    setExitFee("")
   }
 
   const calculations = useMemo(() => {
-    if (initialInvestment === 0 || entryPrice === 0 || exitPrice === 0) {
+    const investment = parseFloat(initialInvestment) || 0;
+    const entry = parseFloat(entryPrice) || 0;
+    const exit = parseFloat(exitPrice) || 0;
+    const invFee = parseFloat(investmentFee) || 0;
+    const exFee = parseFloat(exitFee) || 0;
+
+    if (investment === 0 || entry === 0 || exit === 0) {
       return {
         coins: "0",
         totalValue: "0.00",
@@ -50,30 +56,30 @@ const calculator = () => {
       }
     }
 
-    const coins = initialInvestment / entryPrice
-    const totalValue = coins * exitPrice
+    const coins = investment / entry
+    const totalValue = coins * exit
 
     // Calculate fees in USD
-    const investmentFeeAmount = (initialInvestment * investmentFee) / 100
-    const exitFeeAmount = (totalValue * exitFee) / 100
+    const investmentFeeAmount = (investment * invFee) / 100
+    const exitFeeAmount = (totalValue * exFee) / 100
 
     // Gross profit (before fees)
-    const grossProfit = totalValue - initialInvestment
+    const grossProfit = totalValue - investment
 
     // Net profit (after fees)
     const netProfit = grossProfit - investmentFeeAmount - exitFeeAmount
 
     // Total cost including investment fee
-    const totalCost = initialInvestment + investmentFeeAmount
+    const totalCost = investment + investmentFeeAmount
 
     // Gross profit percentage
-    const grossProfitPercentage = (grossProfit / initialInvestment) * 100
+    const grossProfitPercentage = (grossProfit / investment) * 100
 
     // Net profit percentage
-    const netProfitPercentage = (netProfit / initialInvestment) * 100
+    const netProfitPercentage = (netProfit / investment) * 100
 
-    const priceChange = exitPrice - entryPrice
-    const priceChangePercent = (priceChange / entryPrice) * 100
+    const priceChange = exit - entry
+    const priceChangePercent = (priceChange / entry) * 100
 
     return {
       coins: coins.toFixed(8),
@@ -126,8 +132,8 @@ const calculator = () => {
                 <Input
                   id="investment"
                   type="number"
-                  value={initialInvestment === 0 ? "" : initialInvestment}
-                  onChange={(e) => setInitialInvestment(Number.parseFloat(e.target.value) || 0)}
+                  value={initialInvestment}
+                  onChange={(e) => setInitialInvestment(e.target.value)}
                   className="bg-white dark:bg-white/5 border-gray-950/8 dark:border-white/15 text-gray-950/50 dark:text-gray-200 placeholder-gray-500 focus:border-cfu-0"
                   placeholder="Enter amount in USD"
                 />
@@ -142,8 +148,8 @@ const calculator = () => {
                 <Input
                   id="entry"
                   type="number"
-                  value={entryPrice === 0 ? "" : entryPrice}
-                  onChange={(e) => setEntryPrice(Number.parseFloat(e.target.value) || 0)}
+                  value={entryPrice}
+                  onChange={(e) => setEntryPrice(e.target.value)}
                   className="bg-white dark:bg-white/5 border-gray-950/8 dark:border-white/15 text-gray-950/50 dark:text-gray-200 placeholder-gray-500 focus:border-cfu-0"
                   placeholder="Price when you buy"
                 />
@@ -158,8 +164,8 @@ const calculator = () => {
                 <Input
                   id="exit"
                   type="number"
-                  value={exitPrice === 0 ? "" : exitPrice}
-                  onChange={(e) => setExitPrice(Number.parseFloat(e.target.value) || 0)}
+                  value={exitPrice}
+                  onChange={(e) => setExitPrice(e.target.value)}
                   className="bg-white dark:bg-white/5 border-gray-950/8 dark:border-white/15 text-gray-950/50 dark:text-gray-200 placeholder-gray-500 focus:border-cfu-0"
                   placeholder="Price when you sell"
                 />
@@ -173,8 +179,8 @@ const calculator = () => {
                   <Input
                     id="investmentFee"
                     type="number"
-                    value={investmentFee === 0 ? "" : investmentFee}
-                    onChange={(e) => setInvestmentFee(Number.parseFloat(e.target.value) || 0)}
+                    value={investmentFee}
+                    onChange={(e) => setInvestmentFee(e.target.value)}
                     className="bg-white dark:bg-white/5 border-gray-950/8 dark:border-white/15 text-gray-950/50 dark:text-gray-200 placeholder-gray-500 focus:border-cfu-0"
                     placeholder="0"
                     min="0"
@@ -188,8 +194,8 @@ const calculator = () => {
                   <Input
                     id="exitFee"
                     type="number"
-                    value={exitFee === 0 ? "" : exitFee}
-                    onChange={(e) => setExitFee(Number.parseFloat(e.target.value))}
+                    value={exitFee}
+                    onChange={(e) => setExitFee(e.target.value)}
                     className="bg-white dark:bg-white/5 border-gray-950/8 dark:border-white/15 text-gray-950/50 dark:text-gray-200 placeholder-gray-500 focus:border-cfu-0"
                     placeholder="0"
                     min="0"
@@ -262,7 +268,7 @@ const calculator = () => {
                 ).toFixed(2)}
               </p>
               <p className="text-xs text-white opacity-60 mt-1">
-                {investmentFee.toFixed(1)}% + {exitFee.toFixed(1)}%
+                {parseFloat(investmentFee || "0").toFixed(1)}% + {parseFloat(exitFee || "0").toFixed(1)}%
               </p>
             </div>
 
@@ -281,7 +287,7 @@ const calculator = () => {
       </Card>
 
       {/* Fee Breakdown */}
-      {(investmentFee > 0 || exitFee > 0) && (
+      {(parseFloat(investmentFee) > 0 || parseFloat(exitFee) > 0) && (
         <Card className="bg-gray-950 dark:outline dark:outline-white/10 shadow-none border-0 mb-8">
           <CardHeader>
             <CardTitle className="text-white text-lg">Fee Breakdown</CardTitle>
