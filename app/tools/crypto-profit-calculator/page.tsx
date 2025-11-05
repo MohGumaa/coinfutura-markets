@@ -13,7 +13,7 @@ const CryptoProfitCalculator = () => {
         description="Calculate your potential crypto investment returns with fees included"
       />
 
-      <section className="bg-gray-950/5 dark:bg-white/10 py-10 px-2 lg:px-12">
+      <section className="bg-gray-950/5 dark:bg-white/10 py-10 px-2.5 lg:px-12">
         <Calculator />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
