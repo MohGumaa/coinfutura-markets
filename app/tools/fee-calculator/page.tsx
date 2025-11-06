@@ -1,5 +1,5 @@
-import { Zap } from 'lucide-react'
 import ComingSoon from '@/components/coming-soon'
+import { Banknote, Calculator, Scale } from 'lucide-react'
 
 const FeeCalculatorPage = () => {
   return (
@@ -10,17 +10,17 @@ const FeeCalculatorPage = () => {
         {
           id: 0,
           title:"Multi-Exchange Support",
-          icon: Zap
+          icon: Banknote
         },
         {
           id: 1,
           title:"Fee Comparison",
-          icon: Zap
+          icon: Scale
         },
         {
           id: 2,
           title:"Cost Analysis",
-          icon: Zap
+          icon: Calculator
         },
       ]}
       />

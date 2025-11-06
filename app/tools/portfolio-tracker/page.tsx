@@ -1,5 +1,5 @@
 import ComingSoon from '@/components/coming-soon'
-import { LineChart, Scale, Wallet } from 'lucide-react'
+import { ActivityIcon, LineChart, Scale } from 'lucide-react'
 
 const PortfolioTrackerPage = () => {
   return (
@@ -10,7 +10,7 @@ const PortfolioTrackerPage = () => {
         {
           id: 0,
           title:"Real-Time Valuations",
-          icon: Wallet
+          icon: ActivityIcon
         },
         {
           id: 1,

@@ -1,5 +1,5 @@
-import { Zap } from 'lucide-react'
 import ComingSoon from '@/components/coming-soon'
+import { BadgeCent, ChartCandlestick, RefreshCw } from 'lucide-react'
 
 const PriceConverterPage = () => {
   return (
@@ -10,17 +10,18 @@ const PriceConverterPage = () => {
         {
           id: 0,
           title:"Live Exchange Rates",
-          icon: Zap
+          icon: ChartCandlestick
         },
         {
           id: 1,
           title:"Multiple Currencies",
-          icon: Zap
+          icon: BadgeCent
         },
         {
           id: 2,
           title:"Instant Conversion",
-          icon: Zap
+          icon: RefreshCw
+
         },
       ]}
       />

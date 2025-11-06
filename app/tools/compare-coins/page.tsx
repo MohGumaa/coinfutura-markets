@@ -1,5 +1,5 @@
-import { Zap } from 'lucide-react'
 import ComingSoon from '@/components/coming-soon'
+import { BarChart3, ChartAreaIcon, SlidersHorizontal } from 'lucide-react'
 
 const CompareCoinsPage = () => {
   return (
@@ -10,17 +10,17 @@ const CompareCoinsPage = () => {
         {
           id: 0,
           title:"Side-by-side Comparison",
-          icon: Zap
+          icon: SlidersHorizontal
         },
         {
           id: 1,
           title:"Real-Time Market Data",
-          icon: Zap
+          icon: ChartAreaIcon
         },
         {
           id: 2,
           title:"Performance Charts",
-          icon: Zap
+          icon: BarChart3 
         },
       ]}
       />

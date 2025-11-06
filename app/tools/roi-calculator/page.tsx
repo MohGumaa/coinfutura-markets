@@ -1,5 +1,5 @@
-import { Zap } from 'lucide-react'
 import ComingSoon from '@/components/coming-soon'
+import { BadgePercent, CircleGauge, PieChart } from 'lucide-react'
 
 const RoiCalculatorPage = () => {
   return (
@@ -10,17 +10,17 @@ const RoiCalculatorPage = () => {
         {
           id: 0,
           title:"Multi-Investment Tracking",
-          icon: Zap
+          icon: PieChart 
         },
         {
           id: 1,
           title:"Performance Analytics",
-          icon: Zap
+          icon: CircleGauge
         },
         {
           id: 2,
           title:"ROI Benchmarking",
-          icon: Zap
+          icon: BadgePercent
         },
       ]}
       />
