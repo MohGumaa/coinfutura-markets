@@ -84,3 +84,15 @@ export type ToolsProps = {
   status: string;
   color: string;
 }
+
+export type CardProps = {
+  id: number;
+  title: string;
+  icon: LucideIcon
+}
+
+export type ComingSoonProps = {
+  title: string;
+  description: string;
+  cards: CardProps[]
+}
