@@ -4,22 +4,22 @@ import ComingSoon from '@/components/coming-soon'
 const RoiCalculatorPage = () => {
   return (
     <ComingSoon 
-      title="RoiCalculatorPage" 
-      description="Compare multiple cryptocurrencies side by side with market data and performance metrics. This powerful tool will help you make informed investment decisions."
+      title="ROI Calculator" 
+      description="Calculate return on investment for your crypto trading and investment strategies. Track your gains and analyze performance across multiple investments."
       cards={[
         {
           id: 0,
-          title:"Side-by-side Comparison",
+          title:"Multi-Investment Tracking",
           icon: Zap
         },
         {
           id: 1,
-          title:"Real-Time Market Data",
+          title:"Performance Analytics",
           icon: Zap
         },
         {
           id: 2,
-          title:"Performance Charts",
+          title:"ROI Benchmarking",
           icon: Zap
         },
       ]}

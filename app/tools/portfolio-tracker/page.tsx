@@ -1,26 +1,26 @@
-import { Zap } from 'lucide-react'
 import ComingSoon from '@/components/coming-soon'
+import { LineChart, Scale, Wallet } from 'lucide-react'
 
 const PortfolioTrackerPage = () => {
   return (
     <ComingSoon 
-      title="PortfolioTrackerPage" 
-      description="Compare multiple cryptocurrencies side by side with market data and performance metrics. This powerful tool will help you make informed investment decisions."
+      title="Portfolio Tracker" 
+      description="Track your cryptocurrency portfolio with real-time valuations and comprehensive performance analysis. Monitor all your holdings in one place."
       cards={[
         {
           id: 0,
-          title:"Side-by-side Comparison",
-          icon: Zap
+          title:"Real-Time Valuations",
+          icon: Wallet
         },
         {
           id: 1,
-          title:"Real-Time Market Data",
-          icon: Zap
+          title:"Holdings Overview",
+          icon: Scale
         },
         {
           id: 2,
-          title:"Performance Charts",
-          icon: Zap
+          title:"Performance Tracking",
+          icon: LineChart
         },
       ]}
       />

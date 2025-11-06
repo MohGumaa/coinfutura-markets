@@ -4,22 +4,22 @@ import ComingSoon from '@/components/coming-soon'
 const PriceConverterPage = () => {
   return (
     <ComingSoon 
-      title="PriceConverterPage" 
-      description="Compare multiple cryptocurrencies side by side with market data and performance metrics. This powerful tool will help you make informed investment decisions."
+      title="Crypto Price Converter" 
+      description="Convert between different cryptocurrencies and fiat currencies instantly with live exchange rates. Get accurate conversions at your fingertips."
       cards={[
         {
           id: 0,
-          title:"Side-by-side Comparison",
+          title:"Live Exchange Rates",
           icon: Zap
         },
         {
           id: 1,
-          title:"Real-Time Market Data",
+          title:"Multiple Currencies",
           icon: Zap
         },
         {
           id: 2,
-          title:"Performance Charts",
+          title:"Instant Conversion",
           icon: Zap
         },
       ]}
