@@ -68,9 +68,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={manrope.variable} suppressHydrationWarning>
+    <html lang="en" className={`${manrope.variable} overflow-x-hidden`} suppressHydrationWarning>
       <body
-        className={`${manrope.className} antialiased overflow-x-hidden`}
+        className={`${manrope.className} antialiased`}
       >
         <ThemeProvider 
           attribute="class"
