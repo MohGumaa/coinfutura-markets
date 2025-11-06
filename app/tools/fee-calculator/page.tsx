@@ -4,22 +4,22 @@ import ComingSoon from '@/components/coming-soon'
 const FeeCalculatorPage = () => {
   return (
     <ComingSoon 
-      title="FeeCalculatorPage" 
-      description="Compare multiple cryptocurrencies side by side with market data and performance metrics. This powerful tool will help you make informed investment decisions."
+      title="Trading Fee Calculator" 
+      description="Calculate trading fees across different exchanges and find the best rates. Compare fees and optimize your trading strategy."
       cards={[
         {
           id: 0,
-          title:"Side-by-side Comparison",
+          title:"Multi-Exchange Support",
           icon: Zap
         },
         {
           id: 1,
-          title:"Real-Time Market Data",
+          title:"Fee Comparison",
           icon: Zap
         },
         {
           id: 2,
-          title:"Performance Charts",
+          title:"Cost Analysis",
           icon: Zap
         },
       ]}

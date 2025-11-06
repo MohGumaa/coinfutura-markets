@@ -1,5 +1,5 @@
+import { Clock } from "lucide-react"
 import { ComingSoonProps } from "@/types"
-import { Clock, Zap } from "lucide-react"
 
 const ComingSoon = ({ title, description, cards }: ComingSoonProps) => {
   return (
@@ -28,7 +28,7 @@ const ComingSoon = ({ title, description, cards }: ComingSoonProps) => {
                 className="dark:bg-white/5 ring-1 ring-gray-950/10 dark:ring-white/10 rounded-lg p-4 text-center"
               >
                 <CardIcon className="w-6 h-6 text-cfu-0 mx-auto mb-2" />
-                <h3 className="cfu-title font-semibold text-sm">Side-by-side Comparison</h3>
+                <h3 className="cfu-title font-semibold text-sm">{card.title}</h3>
               </div>
             )
           })}
