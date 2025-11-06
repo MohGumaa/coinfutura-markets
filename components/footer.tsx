@@ -1,7 +1,7 @@
+import Logo from "./logo"
 import Link from "next/link"
 import { env } from "@/config/env"
 import { FOOTER_BOTTOM_NAV_LINKS, FOOTER_COLUMN_DATA, SOCIALMEDIA } from "@/constants"
-import Logo from "./logo"
 
 const Footer = () => {
   return (

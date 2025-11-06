@@ -1,5 +1,5 @@
-import { CTABannerProps } from "@/types"
 import Link from "next/link"
+import { CTABannerProps } from "@/types"
 
 const CTABanner = ({ title, description, buttonText, buttonLink, bgColor="from-cfu-0 to-cfu my-16" }: CTABannerProps) => {
   return (

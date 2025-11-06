@@ -1,11 +1,7 @@
-import React from 'react'
+import ComingSoon from '@/components/coming-soon'
 
 const CompareCoinsPage = () => {
-  return (
-    <div>
-      compare-coins
-    </div>
-  )
+  return <ComingSoon/>
 }
 
 export default CompareCoinsPage
