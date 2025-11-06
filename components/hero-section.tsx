@@ -19,7 +19,7 @@ const HeroSection = ({icon: Icon, title, highlight, description}: HeroSectionPro
   // const sizes = iconSizeMap[iconSize]
 
   return (
-    <section className="text-center mt-12 md:mt-16 mb-12 px-2.5">
+    <section className="text-center max-w-3xl mx-auto mt-12 md:mt-16 mb-12 px-2.5">
       <div className="flex items-center justify-center gap-2 md:gap-3 mb-4">
         {Icon && (
           <div 

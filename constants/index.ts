@@ -2,7 +2,8 @@ import BinanceIcon from "@/components/binance-icon";
 import TwitterIcon from "@/components/twitter-icon";
 import TelegramIcon from "@/components/telegram-icon";
 import CoinmarketcapIcon from "@/components/coinmarketcap-icon";
-import { FooterColumn, NavItem, NavLink, SocialMediaItem } from "@/types";
+import { FooterColumn, NavItem, NavLink, SocialMediaItem, ToolsProps } from "@/types";
+import { BarChart3, Calculator, DollarSign, Scale, TrendingUp, Zap } from "lucide-react";
 
 // Navigation items array
 export const NAVITEMS: NavItem[] = [
@@ -197,5 +198,62 @@ export const FOOTER_BOTTOM_NAV_LINKS: NavLink[] = [
     id: "terms",
     label: "Terms and Conditions",
     href: "/terms-and-conditions",
+  },
+]
+
+export const TOOLS: ToolsProps[] = [
+  {
+    id: "crypto-profit-calculator",
+    name: "Crypto Profit Calculator",
+    description: "Calculate your crypto profits and losses with real-time prices, fees, and detailed breakdowns.",
+    icon: Calculator,
+    href: "/tools/crypto-profit-calculator",
+    status: "active",
+    color: "from-cfu-0 to-cfu",
+  },
+  {
+    id: "compare-coins",
+    name: "Compare Coins",
+    description: "Compare multiple cryptocurrencies side by side with market data and performance metrics.",
+    icon: BarChart3,
+    href: "/tools/compare-coins",
+    status: "coming-soon",
+    color: "from-blue-500 to-cyan-500",
+  },
+  {
+    id: "roi-calculator",
+    name: "ROI Calculator",
+    description: "Calculate return on investment for your crypto trading and investment strategies.",
+    icon: TrendingUp,
+    href: "/tools/roi-calculator",
+    status: "coming-soon",
+    color: "from-purple-500 to-pink-500",
+  },
+  {
+    id: "portfolio-tracker",
+    name: "Portfolio Tracker",
+    description: "Track your cryptocurrency portfolio with real-time valuations and performance analysis.",
+    icon: Scale,
+    href: "/tools/portfolio-tracker",
+    status: "coming-soon",
+    color: "from-orange-500 to-red-500",
+  },
+  {
+    id: "price-converter",
+    name: "Crypto Price Converter",
+    description: "Convert between different cryptocurrencies and fiat currencies instantly.",
+    icon: DollarSign,
+    href: "/tools/price-converter",
+    status: "coming-soon",
+    color: "from-green-500 to-emerald-500",
+  },
+  {
+    id: "fee-calculator",
+    name: "Trading Fee Calculator",
+    description: "Calculate trading fees across different exchanges and find the best rates.",
+    icon: Zap,
+    href: "/tools/fee-calculator",
+    status: "coming-soon",
+    color: "from-yellow-500 to-orange-500",
   },
 ]

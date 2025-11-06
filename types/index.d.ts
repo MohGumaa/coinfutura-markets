@@ -66,3 +66,21 @@ export type HeroSectionProps = {
   // gradientFrom?: string;
   // gradientTo?: string;
 }
+
+export type CTABannerProps = {
+  title: string;
+  description: string;
+  buttonText: string;
+  buttonLink: string;
+  bgColor?: string;
+}
+
+export type ToolsProps = {
+  id: string;
+  name: string;
+  description: string;
+  icon: LucideIcon,
+  href: string;
+  status: string;
+  color: string;
+}
