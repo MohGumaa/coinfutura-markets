@@ -33,6 +33,8 @@ const SubMenuItem = memo(({subItem} : {subItem: NavLinkProps}) => (
   </li>
 ))
 
+SubMenuItem.displayName = 'SubMenuItem'
+
 // Memoized NavItem component
 const NavItem = memo(({ item }: { item: typeof NAVITEMS[number] }) => {
   const hasSubmenu = Boolean(item.submenu)

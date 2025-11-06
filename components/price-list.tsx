@@ -7,6 +7,8 @@ import { Star, ArrowUpDown } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import useCoins from "@/hooks/use-coins"
+import Image from "next/image"
+import { Coin } from "@/types"
 type SortKey = "rank" | "price" | "change24h" | "change7d" | "marketCap" | "volume"
 type SortOrder = "asc" | "desc"
 
@@ -205,7 +207,8 @@ export default function PriceList() {
                     </td>
                   </tr>
                 ) : filteredCoins.length > 0 ? (
-                  filteredCoins.map((coin) => (
+                  
+                  filteredCoins.map((coin: Coin) => (
                     <tr key={coin.id} className="border-b border-slate-800 hover:bg-slate-800 transition-colors">
                       <td className="px-6 py-4">
                         <button
@@ -218,10 +221,12 @@ export default function PriceList() {
                       <td className="px-6 py-4 text-sm text-slate-300">{coin.market_cap_rank}</td>
                       <td className="px-6 py-4">
                         <div className="flex items-center gap-3">
-                          <img
+                          <Image
                             src={coin.image || "/placeholder.svg"}
                             alt={coin.name}
                             className="w-8 h-8 rounded-full"
+                            width={32}
+                            height={32}
                           />
                           <div>
                             <p className="font-semibold text-white">{coin.name}</p>

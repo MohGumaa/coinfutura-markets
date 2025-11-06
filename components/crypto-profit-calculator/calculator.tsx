@@ -10,7 +10,7 @@ import { Button } from "../ui/button";
 import CoinSelector from "./coin-selector";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card"
 
-const calculator = () => {
+const Calculator  = () => {
   const [selectedCoin, setSelectedCoin] = useState<Coin | null>(null)
   const [initialInvestment, setInitialInvestment] = useState<string>("")
   const [entryPrice, setEntryPrice] = useState<string>("")
@@ -223,7 +223,7 @@ const calculator = () => {
           </Card>
           <Card className="bg-gray-950 dark:outline dark:outline-white/10 shadow-none border-0">
             <CardContent className="pt-6">
-              <p className="text-sm font-medium text-gray-400 mb-1">Coins You'll Get</p>
+              <p className="text-sm font-medium text-gray-400 mb-1">Coins You&apos;ll Get</p>
               <p className="text-2xl font-bold text-white">{calculations.coins}</p>
             </CardContent>
           </Card>
@@ -322,4 +322,4 @@ const calculator = () => {
   )
 }
 
-export default calculator
+export default Calculator
