@@ -149,7 +149,7 @@ type NavigationProps = {
 
 const Navigation = memo(({ onNavClick }: NavigationProps) => {
   return (
-    <nav className="flex-1 min-lg:h-full">
+    <nav className="flex-1 min-lg:h-full" aria-label="Main navigation">
       <ul className="flex flex-col min-lg:flex-row gap-x-2 gap-y-5 min-lg:items-center min-lg:h-full">
         {NAVITEMS.map(item => (
           <NavItem key={item.name} item={item} onNavClick={onNavClick} />

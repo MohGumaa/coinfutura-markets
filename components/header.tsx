@@ -62,9 +62,7 @@ const Header = () => {
   }, [])
 
   // Toggle menu and handle body overflow
-  const toggleMenu = useCallback(() => {
-    setIsOpen(prev => !prev)
-  }, [])
+  const toggleMenu = useCallback(() => setIsOpen(prev => !prev), [])
 
   // Handle body overflow when menu opens/closes
   useEffect(() => {
@@ -94,6 +92,7 @@ const Header = () => {
     <header 
       ref={headerRef}
       className='sticky top-0 z-50 border-y border-black/5 dark:border-white/10 bg-white dark:bg-gray-950 shadow-xs'
+      role="banner"
     >
       <div className={GRID_CLASSES}>
         <div className="col-start-1 row-span-full row-start-1 hidden min-md:block"/>
@@ -101,7 +100,7 @@ const Header = () => {
         {/* Header Content */}
         <div className="flex items-center justify-between gap-8 px-2.5 md:px-0 h-14">
 
-          <Logo />
+          <Logo aria-label="CoinFutura homepage" />
 
           <div 
             ref={navRef}
