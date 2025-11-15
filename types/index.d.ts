@@ -96,3 +96,18 @@ export type ComingSoonProps = {
   description: string;
   cards: CardItemProps[]
 }
+
+export type WordPressPost = {
+  id: number;
+  title: { rendered: string };
+  link: string;
+  _embedded?: {
+    "wp:featuredmedia"?: Array<{
+      media_details?: {
+        sizes?: {
+          thumbnail?: { source_url: string }
+        }
+      }
+    }>
+  }
+}
