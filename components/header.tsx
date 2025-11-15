@@ -44,8 +44,10 @@ IconButton.displayName = 'IconButton'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
   const headerRef = useRef<HTMLElement>(null)
   const navRef = useRef<HTMLDivElement>(null)
+  const searchRef = useRef<HTMLDivElement>(null)
 
   // Update navigation position and height
   const updateNavPosition = useCallback(() => {
@@ -63,6 +65,9 @@ const Header = () => {
 
   // Toggle menu and handle body overflow
   const toggleMenu = useCallback(() => setIsOpen(prev => !prev), [])
+
+  // Toggle search visibility on mobile
+  const toggleSearch = useCallback(() => setIsSearchOpen(prev => !prev), [])
 
   // Handle body overflow when menu opens/closes
   useEffect(() => {
@@ -110,10 +115,15 @@ const Header = () => {
             <ModeToggle />
           </div>
 
-          <BlogSearch />
+          <BlogSearch isSearchOpen={isSearchOpen}/>
 
           <div className="flex min-lg:hidden items-center gap-x-4">
-            <IconButton icon={Search} label="search" iconSize={20} />
+            <IconButton 
+              icon={Search} 
+              label="search" 
+              onClick={toggleSearch}
+              iconSize={20} 
+            />
             <IconButton 
               icon={isOpen ? X : Menu} 
               label="primary-menu" 

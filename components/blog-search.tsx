@@ -2,16 +2,21 @@
 
 import Image from "next/image"
 import { Search, Loader2, ArrowRight } from "lucide-react"
-import { useState, useCallback, useEffect, useRef } from "react"
+import { useState, useCallback, useRef } from "react"
 import { WordPressPost } from "@/types"
 
-const BlogSearch = () => {
+interface BlogSearchProps {
+  isSearchOpen: boolean
+}
+
+const BlogSearch = ({ isSearchOpen }: BlogSearchProps) => {
   const [searchTerm, setSearchTerm] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [results, setResults] = useState<WordPressPost[]>([])
   const [showResults, setShowResults] = useState(false)
   const searchTimer = useRef<NodeJS.Timeout | undefined>(undefined)
+  const searchRef = useRef<HTMLDivElement>(null)
 
   const fetchPosts = useCallback(async (term: string) => {
     if (term.length < 2) {
@@ -53,7 +58,10 @@ const BlogSearch = () => {
   )
 
   return (
-    <div className="min-lg:relative min-lg:h-full min-xl:w-80 min-lg:w-64 min-lg:flex min-lg:items-center min-lg:justify-end max-lg:hidden max-lg:absolute max-lg:right-3 max-lg:top-full max-lg:w-96 max-lg:py-2.5 max-lg:bg-white max-lg:dark:bg-gray-800 max-lg:border max-lg:border-gray-950/5 max-lg:dark:border-white/10 max-lg:rounded-b-lg max-lg:shadow z-50 text-sm">
+    <div 
+      ref={searchRef}
+      className={`min-lg:relative min-lg:h-full min-xl:w-80 min-lg:w-64 min-lg:flex min-lg:items-center min-lg:justify-end max-lg:absolute max-lg:right-3 max-lg:top-full max-lg:w-96 max-lg:py-2.5 max-lg:bg-white max-lg:dark:bg-gray-800 max-lg:border max-lg:border-gray-950/5 max-lg:dark:border-white/10 max-lg:rounded-b-lg max-lg:shadow z-50 text-sm ${isSearchOpen ? '' : 'max-lg:hidden'}`}
+    >
       <div className="relative w-full max-lg:max-w-[calc(100%-12px)] mx-auto">
         <input 
           type="text" 
