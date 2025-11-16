@@ -95,7 +95,7 @@ const Header = () => {
   return (
     <>
       <div className="min-h-11">
-        {/* @ts-ignore */}
+        {/* @ts-expect-error: custom element from CoinGecko is not typed */}
         <gecko-coin-price-marquee-widget
           locale="en"
           dark-mode="true"

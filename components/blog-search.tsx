@@ -166,7 +166,7 @@ const BlogSearch = ({ isSearchOpen }: BlogSearchProps) => {
 
     return (
       <p className="text-center p-3">
-        {searchTerm ? "No results found" : "Type to search..."}
+        {searchTerm ? "No results found" : error}
       </p>
     )
   }

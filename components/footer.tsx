@@ -1,5 +1,6 @@
 import Logo from "./logo"
 import Link from "next/link"
+import Script from "next/script"
 import { env } from "@/config/env"
 import { FOOTER_BOTTOM_NAV_LINKS, FOOTER_COLUMN_DATA, SOCIALMEDIA } from "@/constants"
 
@@ -65,7 +66,10 @@ const Footer = () => {
         </section>
       </div>
 
-      <script src="https://widgets.coingecko.com/gecko-coin-price-marquee-widget.js"></script>
+      <Script 
+        src="https://widgets.coingecko.com/gecko-coin-price-marquee-widget.js"
+        strategy="afterInteractive"
+      />
     </>
   )
 }
