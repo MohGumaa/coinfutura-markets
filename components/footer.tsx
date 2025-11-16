@@ -64,6 +64,8 @@ const Footer = () => {
           </div>
         </section>
       </div>
+
+      <script src="https://widgets.coingecko.com/gecko-coin-price-marquee-widget.js"></script>
     </>
   )
 }

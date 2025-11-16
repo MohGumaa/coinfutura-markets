@@ -93,47 +93,60 @@ const Header = () => {
   }, [updateNavPosition])
 
   return (
-    <header 
-      ref={headerRef}
-      className='sticky top-0 z-50 border-y border-black/5 dark:border-white/10 bg-white dark:bg-gray-950 shadow-xs'
-      role="banner"
-    >
-      <div className={GRID_CLASSES}>
-        <div className="col-start-1 row-span-full row-start-1 hidden min-md:block"/>
-
-        {/* Header Content */}
-        <div className="flex items-center justify-between gap-8 px-2.5 md:px-0 h-14">
-
-          <Logo aria-label="CoinFutura homepage" />
-
-          <div 
-            ref={navRef}
-            className={`${MOBILE_MENU_CLASSES} ${isOpen ? 'max-lg:translate-x-0' : 'max-lg:-translate-x-full'}`}
-          >
-            <Navigation onNavClick={() => setIsOpen(false)} />
-            <ModeToggle />
-          </div>
-
-          <BlogSearch isSearchOpen={isSearchOpen}/>
-
-          <div className="flex min-lg:hidden items-center gap-x-4">
-            <IconButton 
-              icon={Search} 
-              label="search" 
-              onClick={toggleSearch}
-              iconSize={20} 
-            />
-            <IconButton 
-              icon={isOpen ? X : Menu} 
-              label="primary-menu" 
-              onClick={toggleMenu}
-              iconSize={24}
-            />
-          </div>
-        </div>
-        <div className="row-span-full row-start-1 md:col-start-3 min-md:block"/>
+    <>
+      <div className="min-h-11">
+        {/* @ts-ignore */}
+        <gecko-coin-price-marquee-widget
+          locale="en"
+          dark-mode="true"
+          outlined="true"
+          coin-ids="pancakeswap-token,pi-network,bitcoin,binancecoin,solana,ethereum,jupiter-exchange-solana,the-open-network,hyperliquid,berachain-bera,dogecoin,bubblemaps"
+          initial-currency="usd"
+        />
       </div>
-    </header>
+
+      <header 
+        ref={headerRef}
+        className='sticky top-0 z-50 border-y border-black/5 dark:border-white/10 bg-white dark:bg-gray-950 shadow-xs'
+        role="banner"
+      >
+        <div className={GRID_CLASSES}>
+          <div className="col-start-1 row-span-full row-start-1 hidden min-md:block"/>
+
+          {/* Header Content */}
+          <div className="flex items-center justify-between gap-8 px-2.5 md:px-0 h-14">
+
+            <Logo aria-label="CoinFutura homepage" />
+
+            <div 
+              ref={navRef}
+              className={`${MOBILE_MENU_CLASSES} ${isOpen ? 'max-lg:translate-x-0' : 'max-lg:-translate-x-full'}`}
+            >
+              <Navigation onNavClick={() => setIsOpen(false)} />
+              <ModeToggle />
+            </div>
+
+            <BlogSearch isSearchOpen={isSearchOpen}/>
+
+            <div className="flex min-lg:hidden items-center gap-x-4">
+              <IconButton 
+                icon={Search} 
+                label="search" 
+                onClick={toggleSearch}
+                iconSize={20} 
+              />
+              <IconButton 
+                icon={isOpen ? X : Menu} 
+                label="primary-menu" 
+                onClick={toggleMenu}
+                iconSize={24}
+              />
+            </div>
+          </div>
+          <div className="row-span-full row-start-1 md:col-start-3 min-md:block"/>
+        </div>
+      </header>
+    </>
   )
 }
 
