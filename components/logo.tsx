@@ -5,8 +5,9 @@ import { LogoProps } from '@/types';
 // import { useTheme } from 'next-themes';
 import DarkLogo from './dark-logo';
 import LightLogo from './light-logo';
+import { env } from '@/config/env';
 
-const Logo = ({className, href="/"}: LogoProps) => {
+const Logo = ({className, href=env.mainDomain}: LogoProps) => {
   // const [mounted, setMounted] = useState(false);
   // const { resolvedTheme } = useTheme();
 
