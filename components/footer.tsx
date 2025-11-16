@@ -42,7 +42,11 @@ const Footer = () => {
               <ul className="space-y-5">
                 {column.links.map(link => (
                   <li key={link.id}>
-                    <a href={link.href} className="hover:underline text-sm text-gray-950 dark:text-white leading-6">{link.label}</a>
+                    {link.external ? (
+                      <a href={link.href} className="hover:underline text-sm text-gray-950 dark:text-white leading-6 capitalize">{link.label}</a>
+                    ) : (
+                      <Link href={link.href} className="hover:underline text-sm text-gray-950 dark:text-white leading-6 capitalize">{link.label}</Link>
+                    )}
                   </li>
                 ))}
               </ul>

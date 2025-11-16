@@ -35,7 +35,8 @@ export type NavLink = {
   label: string;
   href: string;
   icon?: React.ComponentType<React.SVGProps<SVGAElement>>;
-  disabled?: boolean
+  disabled?: boolean,
+  external?: boolean;
 }
 
 export type FooterColumn = {

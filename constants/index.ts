@@ -41,18 +41,18 @@ export const NAVITEMS: NavItem[] = [
   },
   {
     name: 'market',
-    href: '/',
-    external: false,
+    href: 'https://coinfutura.com/market/',
+    external: true,
     submenu: [
       {
         name: 'live market',
-        href: '/',
-        external: false
+        href: 'https://coinfutura.com/market/live-market/',
+        external: true
       },
       {
         name: 'price analysis',
         href: 'https://coinfutura.com/market/price-analysis/',
-        external: false
+        external: true
       },
     ]
   },
@@ -147,33 +147,33 @@ export const FOOTER_COLUMN_DATA: FooterColumn[] = [
     id: 1,
     title: "News",
     links: [
-      { id: "altcoin-news", label: "Altcoin News", href: "/altcoin-news" },
-      { id: "bitcoin-news", label: "Bitcoin News", href: "/bitcoin-news" },
-      { id: "ethereum-news", label: "Ethereum News", href: "/ethereum-news" },
-      { id: "hot-news", label: "Hot News", href: "/hot-news" },
-      { id: "memecoins-news", label: "Memecoins News", href: "/memecoins-news" },
+      { id: "altcoin-news", label: "Altcoin News", href: "https://coinfutura.com/news/altcoin/", external: true},
+      { id: "bitcoin-news", label: "Bitcoin News", href: "https://coinfutura.com/news/bitcoin/", external: true},
+      { id: "ethereum-news", label: "Ethereum News", href: "https://coinfutura.com/news/ethereum/", external: true},
+      { id: "hot-news", label: "Hot News", href: "https://coinfutura.com/news/hot-news/", external: true},
+      { id: "memecoins-news", label: "Memecoins News", href: "https://coinfutura.com/news/memecoins/", external: true},
     ]
   },
   {
     id: 2,
     title: "Trending Topics",
     links: [
-      { id: "market", label: "Market", href: "/market" },
-      { id: "live-market", label: "Live Market", href: "/live-market" },
-      { id: "press-release", label: "Press Release", href: "/press-release" },
-      { id: "price-analysis", label: "Price Analysis", href: "/price-analysis" },
-      { id: "price-prediction", label: "Price Prediction", href: "/price-prediction" },
+      { id: "market", label: "Market", href: "https://coinfutura.com/market/", external: true},
+      { id: "live-market", label: "Live Market", href: "https://coinfutura.com/market/live-market/", external: true},
+      { id: "crypto-tools", label: "Crypto Tools", href: "/tools", external: false},
+      { id: "price-prediction", label: "Price Prediction", href: "https://coinfutura.com/market/price-prediction/", external: true},
+      { id: "crypto-profit-calculator", label: "crypto profit calculator", href: "/tools/crypto-profit-calculator", external: false},
     ]
   },
   {
     id: 3,
     title: "Site Map",
     links: [
-      { id: "about-us", label: "About Us", href: "/about-us" },
-      { id: "disclaimer", label: "Disclaimer", href: "/disclaimer" },
-      { id: "privacy-policy", label: "Privacy Policy", href: "/privacy-policy" },
-      { id: "submit-press-release", label: "Submit Press Release", href: "/submit-press-release" },
-      { id: "terms-conditions", label: "Term and Conditions", href: "/terms-and-conditions" },
+      { id: "about-us", label: "about us", href: "https://coinfutura.com/about-us/", external: true},
+      { id: "disclaimer", label: "disclaimer", href: "https://coinfutura.com/disclaimer/", external: true},
+      { id: "privacy-policy", label: "privacy policy", href: "https://coinfutura.com/privacy-policy/", external: true},
+      { id: "submit-press-release", label: "Submit Press Release", href: "https://coinfutura.com/submit-press-release/", external: true},
+      { id: "terms-conditions", label: "Term and Conditions", href: "https://coinfutura.com/term-and-conditions/", external: true},
     ]
   },
 ]
