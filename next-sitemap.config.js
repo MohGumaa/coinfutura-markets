@@ -11,6 +11,7 @@ module.exports = {
   exclude: ["/404", "/500"],
   robotsTxtOptions: {
     policies: [{ userAgent: "*", allow: "/" }],
+    host: null,
     // additionalSitemaps should be full absolute URLs if used
     // but you usually don't need to re-add the main /sitemap.xml
     additionalSitemaps: [

@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://market.coinfutura.com
-
-# Sitemaps
-Sitemap: https://market.coinfutura.com/sitemap.xml
