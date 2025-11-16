@@ -169,12 +169,20 @@
     @apply flex items-center justify-center size-8 rounded-full ring inset-ring ring-gray-950/10 inset-ring-white/10 p-0.5 [&_svg]:size-6 opacity-100 hover:opacity-80 transition-all duration-300 ease-in-out;
   }
 
-  .btn {
+  /* .btn {
     @apply cursor-pointer rounded-4xl! border-none font-semibold! text-white hover:text-white! bg-black! hover:bg-gray-800! dark:bg-gray-700! dark:hover:bg-gray-600! px-4! py-2;
+  } */
+
+  .btn {
+    @apply cursor-pointer rounded-md border-none font-medium capitalize transition px-4 py-2;
   }
 
   .btn-primary {
-    @apply bg-blue-600 text-white hover:bg-blue-700;
+    @apply text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600;
+  }
+
+  .btn-small {
+    @apply text-sm;
   }
 
   .card {

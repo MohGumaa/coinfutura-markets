@@ -47,7 +47,6 @@ const Header = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const headerRef = useRef<HTMLElement>(null)
   const navRef = useRef<HTMLDivElement>(null)
-  const searchRef = useRef<HTMLDivElement>(null)
 
   // Update navigation position and height
   const updateNavPosition = useCallback(() => {
