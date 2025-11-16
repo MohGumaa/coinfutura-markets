@@ -1,16 +1,13 @@
-import type { Metadata } from "next"
 import ComingSoon from '@/components/coming-soon'
 import { BadgeCent, ChartCandlestick, RefreshCw } from 'lucide-react'
+import { generatePageMetadata } from "@/lib/utils"
 
-export const metadata: Metadata = {
-  title: "Crypto Price Converter | CoinFutura",
+export const metadata = generatePageMetadata({
+  title: "Crypto Price Converter",
   description:
-    "Convert cryptocurrencies to fiat or other cryptocurrencies instantly.",
-  alternates: {
-    canonical: "https://market.coinfutura.com/tools/crypto-price-converter",
-  },
-};
-
+    "Convert between cryptocurrencies and fiat currencies instantly with real-time prices.",
+  path: "/tools/crypto-price-converter",
+});
 
 const PriceConverterPage = () => {
   return (

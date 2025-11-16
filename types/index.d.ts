@@ -111,3 +111,10 @@ export type WordPressPost = {
     }>
   }
 }
+
+export type GeneratePageMetadataProps = {
+  title: string;
+  description: string;
+  path: string;
+  image?: string;
+}

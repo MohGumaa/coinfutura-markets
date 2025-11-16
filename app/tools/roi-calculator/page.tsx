@@ -1,15 +1,13 @@
-import type { Metadata } from "next"
 import ComingSoon from '@/components/coming-soon'
 import { BadgePercent, CircleGauge, PieChart } from 'lucide-react'
+import { generatePageMetadata } from "@/lib/utils";
 
-export const metadata: Metadata = {
-  title: "Crypto ROI Calculator | CoinFutura",
+export const metadata = generatePageMetadata({
+  title: "ROI Calculator",
   description:
-    "Calculate return on investment for your crypto trading and investment strategies.",
-  alternates: {
-    canonical: "https://market.coinfutura.com/tools/roi-calculator",
-  },
-};
+    "Calculate return on investment for your crypto trades and long-term investment strategies.",
+  path: "/tools/roi-calculator",
+});
 
 
 const RoiCalculatorPage = () => {

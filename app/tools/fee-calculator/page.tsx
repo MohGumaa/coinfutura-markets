@@ -1,16 +1,13 @@
-import type { Metadata } from "next"
 import ComingSoon from '@/components/coming-soon'
 import { Banknote, Calculator, Scale } from 'lucide-react'
+import { generatePageMetadata } from "@/lib/utils";
 
-export const metadata: Metadata = {
-  title: "Trading Fee Calculator | CoinFutura",
+export const metadata = generatePageMetadata({
+  title: "Trading Fee Calculator",
   description:
-    "Calculate trading fees across major crypto exchanges and find the best rates.",
-  alternates: {
-    canonical: "https://market.coinfutura.com/tools/trading-fee-calculator",
-  },
-};
-
+    "Calculate trading fees across different exchanges and find the best rates.",
+  path: "/tools/trading-fee-calculator",
+});
 
 const FeeCalculatorPage = () => {
   return (

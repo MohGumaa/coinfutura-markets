@@ -1,16 +1,13 @@
-import type { Metadata } from "next"
 import ComingSoon from '@/components/coming-soon'
 import { ActivityIcon, LineChart, Scale } from 'lucide-react'
+import { generatePageMetadata } from "@/lib/utils"
 
-export const metadata: Metadata = {
-  title: "Crypto Portfolio Tracker | CoinFutura",
+export const metadata = generatePageMetadata({
+  title: "Portfolio Tracker",
   description:
-    "Track your cryptocurrency holdings with real-time valuations and performance analytics.",
-  alternates: {
-    canonical: "https://market.coinfutura.com/tools/portfolio-tracker",
-  },
-};
-
+    "Track your crypto portfolio with real-time valuations, PnL, and performance analytics.",
+  path: "/tools/portfolio-tracker",
+});
 
 const PortfolioTrackerPage = () => {
   return (

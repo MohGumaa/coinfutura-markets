@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   },
 
   title: {
-    default: "CoinFutura Tools – Free Crypto Calculators & Market Utilities",
-    template: "%s | CoinFutura Tools",
+    default: "Tools – Free Crypto Calculators & Market Utilities",
+    template: "%s | CoinFutura",
   },
 
   description:
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   publisher: "CoinFutura",
 
   alternates: {
-    canonical: "https://market.coinfutura.com/",
+    canonical: "https://market.coinfutura.com",
   },
 
   robots: {
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     siteName: "CoinFutura Tools",
     images: [
       {
-        url: "https://market.coinfutura.com/og-image.png",
+        url: "https://market.coinfutura.com/og/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "CoinFutura Tools",
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     description:
       "Explore CoinFutura’s free suite of crypto tools powered by real-time market data.",
     creator: "@mgumaa",
-    images: ["https://market.coinfutura.com/og-image.png"],
+    images: ["https://market.coinfutura.com/og/og-image.jpg"],
   },
 
   formatDetection: {
