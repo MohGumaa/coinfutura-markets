@@ -1,5 +1,16 @@
+import type { Metadata } from "next"
 import ComingSoon from '@/components/coming-soon'
 import { ActivityIcon, LineChart, Scale } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: "Crypto Portfolio Tracker | CoinFutura",
+  description:
+    "Track your cryptocurrency holdings with real-time valuations and performance analytics.",
+  alternates: {
+    canonical: "https://market.coinfutura.com/tools/portfolio-tracker",
+  },
+};
+
 
 const PortfolioTrackerPage = () => {
   return (

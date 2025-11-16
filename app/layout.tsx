@@ -13,54 +13,92 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mgumaa.com"),
-  title: {
-    default: "CoinFutura - Blockchain News for the Next Generation",
-    template: "%s | CoinFutura"
+  // IMPORTANT: subdomain base
+  metadataBase: new URL("https://market.coinfutura.com"),
+
+  // Google Search Console
+  verification: {
+    google: "QWNxvW40oSgcnmmsVw_-6I61DhuAgEy7I-rnwWpFceI",
   },
-  description: "Discover the latest crypto news, price analysis, and blockchain trends with CoinFutura. Trusted insights on Bitcoin, Ethereum, NFTs, and the future of Web3 clear, accurate, and timely.",
-  keywords:[
-    "Crypto News",
-    "Price Analysis",
-    "Blockchain",
+
+  title: {
+    default: "CoinFutura Tools – Free Crypto Calculators & Market Utilities",
+    template: "%s | CoinFutura Tools",
+  },
+
+  description:
+    "Free crypto tools by CoinFutura—including a Profit Calculator, Coin Comparison, ROI Calculator, Portfolio Tracker, and more. Powered by real-time market data.",
+
+  keywords: [
+    "Crypto Tools",
+    "Crypto Calculator",
+    "Crypto Profit Calculator",
+    "Compare Coins",
+    "Crypto ROI Calculator",
+    "Portfolio Tracker",
+    "Crypto Converter",
+    "Trading Fee Calculator",
     "Bitcoin",
     "Ethereum",
-    "NFTs",
-    "Web3",
-    "Top trending coins",
-    "Cryptos",
-    "Exchange",
-    "Airdrop",
-    "Launchpad",
-    "ETF Tracker",
+    "Web3 Tools",
   ],
-  authors:[
-    {
-      name: "Mohamed Gumaa",
-      url: "https://mgumaa.com",
-    },
-  ],
+
+  authors: [{ name: "Mohamed Gumaa", url: "https://mgumaa.com" }],
   creator: "Mohamed Gumaa",
-  publisher: "Mohamed Gumaa",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
+  publisher: "CoinFutura",
+
+  alternates: {
+    canonical: "https://market.coinfutura.com/",
   },
-  category: "Crypto",
-  classification: "Crypto Website",
+
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
       "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
     },
   },
+
+  openGraph: {
+    type: "website",
+    url: "https://market.coinfutura.com",
+    title: "CoinFutura Tools – Free Crypto Calculators & Market Utilities",
+    description:
+      "Free crypto tools including calculators, converters, and tracking utilities powered by CoinFutura.",
+    siteName: "CoinFutura Tools",
+    images: [
+      {
+        url: "https://market.coinfutura.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "CoinFutura Tools",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "CoinFutura Tools – Free Crypto Calculators & Market Utilities",
+    description:
+      "Explore CoinFutura’s free suite of crypto tools powered by real-time market data.",
+    creator: "@mgumaa",
+    images: ["https://market.coinfutura.com/og-image.png"],
+  },
+
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+
+  category: "Crypto Tools",
+  classification: "Crypto Tools Platform",
 };
+
 
 export default function RootLayout({
   children,

@@ -1,8 +1,31 @@
 import Link from 'next/link'
+import type { Metadata } from "next"
 import { ArrowRight, Zap } from 'lucide-react'
 import { TOOLS } from '@/constants'
 import CTABanner from '@/components/cta-banner'
 import HeroSection from '@/components/hero-section'
+
+export const metadata: Metadata = {
+  title: "Crypto Tools | CoinFutura",
+  description:
+    "A collection of powerful, free crypto tools including profit calculator, ROI calculator, trading fee calculator, and more.",
+  openGraph: {
+    title: "Crypto Tools | CoinFutura",
+    description:
+      "Free cryptocurrency tools: profit calculator, portfolio tracker, trading fee calculator, and more.",
+    url: "https://market.coinfutura.com/tools",
+    siteName: "CoinFutura",
+    images: [
+      {
+        url: "https://market.coinfutura.com/og/og-image.jpg", // optional if you create OG images
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+};
 
 const CryptoToolsPage = () => {
 

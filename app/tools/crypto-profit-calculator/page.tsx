@@ -1,7 +1,30 @@
 import { TrendingUp } from "lucide-react"
+import type { Metadata } from "next"
 import HeroSection from "@/components/hero-section"
 import Calculator from "@/components/crypto-profit-calculator/calculator"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+
+export const metadata: Metadata = {
+  title: "Crypto Profit Calculator | CoinFutura",
+  description:
+    "Calculate crypto profits and losses instantly using live prices, trading fees, entry and exit values.",
+  openGraph: {
+    title: "Crypto Profit Calculator | CoinFutura",
+    description:
+      "Use our free profit calculator to calculate crypto gains, losses, and fees in real-time.",
+    url: "https://market.coinfutura.com/tools/crypto-profit-calculator",
+    images: [
+      {
+        url: "https://market.coinfutura.com/og/og-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://market.coinfutura.com/tools/crypto-profit-calculator",
+  },
+};
 
 const CryptoProfitCalculator = () => {
   return (

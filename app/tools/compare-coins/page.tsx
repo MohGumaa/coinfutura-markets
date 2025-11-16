@@ -1,5 +1,16 @@
+import type { Metadata } from "next"
 import ComingSoon from '@/components/coming-soon'
 import { BarChart3, ChartAreaIcon, SlidersHorizontal } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: "Compare Cryptocurrencies | CoinFutura",
+  description:
+    "Compare multiple cryptocurrencies side-by-side with real-time prices, charts, and metrics.",
+  alternates: {
+    canonical: "https://market.coinfutura.com/tools/compare-coins",
+  },
+};
+
 
 const CompareCoinsPage = () => {
   return (
