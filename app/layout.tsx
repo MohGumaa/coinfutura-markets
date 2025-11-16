@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   // IMPORTANT: subdomain base
   metadataBase: new URL("https://market.coinfutura.com"),
 
-  // Google Search Console
+  // Google Search Console for verify
   verification: {
     google: "QWNxvW40oSgcnmmsVw_-6I61DhuAgEy7I-rnwWpFceI",
   },
