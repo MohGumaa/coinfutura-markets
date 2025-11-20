@@ -1,7 +1,7 @@
 <div align="center">
   <br />
-    <a href="https://coinfutura.com" target="_blank">
-      <img src="https://coinfutura.com/wp-content/uploads/2025/04/CoinFutura-Feature.jpg" alt="Project Banner" style="border-radius: 4px; margin-bottom: 16px; ">
+    <a href="https://cryptofrontnews.com" target="_blank">
+      <img src="" alt="Project Banner" style="border-radius: 4px; margin-bottom: 16px; ">
     </a>
   <br />
 
@@ -13,13 +13,13 @@
     <img src="https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black" alt="firebase" />
   </div>
 
-  <h3 align="center">CoinFutura Market</h3>
+  <h3 align="center">Cryptofrontnews Market</h3>
 
 </div>
 
 ## <a name="introduction">🤖 Introduction</a>
 
-This is a comprehensive specification for building <a href="https://coinfutura.com" target="_blank"><b>CoinFutura Market Dashboard</b></a> - a full-featured cryptocurrency market platform with multiple distinct systems including market listings, comparison tools, exchange data, airdrops, launchpad projects, and ETF tracking. The spec calls for a modern dark theme with neon-blue accents, similar to coinfutura Markets.. all built using Next.js.
+This is a comprehensive specification for building <a href="https://cryptofrontnews.com" target="_blank"><b>Cryptofrontnews Market Dashboard</b></a> - a full-featured cryptocurrency market platform with multiple distinct systems including market listings, comparison tools, exchange data, airdrops, launchpad projects, and ETF tracking. The spec calls for a modern dark theme with neon-blue accents, similar to Cryptofrontnews Markets.. all built using Next.js.
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
@@ -65,8 +65,8 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/MohGumaa/coinfutura-markets
-cd coinfutura-markets
+git clone https://github.com/MohGumaa/cryptofrontnews-markets
+cd cryptofrontnews-markets
 ```
 
 **Installation**

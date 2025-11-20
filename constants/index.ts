@@ -1,6 +1,7 @@
-import BinanceIcon from "@/components/binance-icon";
-import TwitterIcon from "@/components/twitter-icon";
-import TelegramIcon from "@/components/telegram-icon";
+import BinanceIcon from "@/components/binance-icon"
+import TwitterIcon from "@/components/twitter-icon"
+import FacebookIcon from "@/components/facebook-icon"
+import TelegramIcon from "@/components/telegram-icon"
 import CoinmarketcapIcon from "@/components/coinmarketcap-icon";
 import { FooterColumn, NavItem, NavLink, SocialMediaItem, ToolsProps } from "@/types";
 import { BarChart3, Calculator, DollarSign, Scale, TrendingUp, Zap } from "lucide-react";
@@ -113,30 +114,37 @@ export const NAVITEMS: NavItem[] = [
 
 export const SOCIALMEDIA: SocialMediaItem[] = [
   {
+    id: 'facebook',
+    name: 'Facebook',
+    href: 'https://x.com/coinfutura',
+    className: "facebook-bg",
+    icon: FacebookIcon
+  },
+  {
     id: 'twitter',
     name: 'Twitter',
-    href: 'https://twitter.com/yourhandle',
+    href: 'https://x.com/coinfutura',
     className: "twitter-bg",
     icon: TwitterIcon
   },
   {
     id: 'telegram',
     name: 'Telegram',
-    href: 'https://twitter.com/yourhandle',
+    href: 'https://t.me/coinfuturaMedia',
     className: "telegram-bg",
     icon: TelegramIcon
   },
   {
     id: 'binance',
     name: 'Binance',
-    href: 'https://twitter.com/yourhandle',
-    className: "twitter-bg",
+    href: 'https://www.binance.com/en/square/profile/coinfutura',
+    className: "bg-black",
     icon: BinanceIcon
   },
     {
     id: 'coinmarketcap',
     name: 'Coinmarketcap',
-    href: 'https://twitter.com/yourhandle',
+    href: 'https://coinmarketcap.com/community/profile/Coinfutura/',
     className: "bg-white",
     icon: CoinmarketcapIcon
   },
